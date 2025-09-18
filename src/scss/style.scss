@@ -1,7 +1,6 @@
-/*@import './global/fonts';
-@import './global/colors';
-@import './global/general';
-*/
+@use './global/fonts';
+@use './global/general';
+
 @use './block/header';
 @use './block/slider';
 @use './block/popular';

@@ -1,0 +1,102 @@
+.header {
+    &-info {
+        .logo {
+            width: 80px;
+            height: 43px;
+            margin-right: 53px;
+        }
+
+        .text {
+            font-size: 14px;
+
+            .title {
+                color: #b3b3b3;
+            }
+        }
+
+        .social-media {
+            svg {
+                width: 25px;
+                height: 25px;
+
+                &:first-child {
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+
+    .navigation {
+        padding: 13px 0px;
+        font-size: 18px;
+
+        .hamburger {
+            position: relative;
+            width: 26px;
+            height: 20px;
+            font-size: inherit;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 13px;
+
+            &.is-md {
+                font-size: 1.5rem;
+            }
+
+            &-line {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                border-radius: 50px;
+                background: currentColor;
+                transition: all 0.3s ease;
+
+                &:nth-child(1) {
+                    top: 3px;
+                }
+
+                &:nth-child(2) {
+                    top: 9px;
+                }
+
+                &:nth-child(3) {
+                    top: 15px;
+                    width: 13px;
+                }
+            }
+
+            &.is-active,
+            .w-nav-button.w--open & {
+                .hamburger-line {
+                    &:nth-child(1) {
+                        top: 9px;
+                        transform: rotate(-45deg);
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                        transform: translateX(-10px);
+                    }
+
+                    &:nth-child(3) {
+                        top: 9px;
+                        width: 100%;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+
+        .dropdown {
+            min-width: 185px;
+        }
+
+        li:not(li:last-child) {
+            opacity: 0.7;
+                letter-spacing: 0.7px;
+        }
+
+    }
+}
